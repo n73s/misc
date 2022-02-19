@@ -40,7 +40,13 @@
                 width: 50%;
             }
             footer {
-                margin-top: 3em;
+                /*
+                    https://developer.mozilla.org/en-US/docs/Web/CSS/clear#examples%22
+                    > When applied to non-floating blocks, it moves the border edge of the element down
+                    > until it is below the margin edge of all relevant floats.
+                    > The non-floated block's top margin collapses.
+                */
+                margin-top: 100vh;
                 clear: left;
             }
         </style>
