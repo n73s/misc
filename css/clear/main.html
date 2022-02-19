@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>a exercise of CSS clear | n73s</title>
+        <style>
+            *, ::before, ::after {
+                box-sizing: border-box;
+            }
+            main {
+                float: left;
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+            .wrapper{
+                float: left;
+                width: 100%;
+                border:1px solid black;
+                padding:10px;
+            }
+            .left {
+                float: left;
+                border: 1px solid black;
+                clear: left;
+            }
+            .black {
+                float: left;
+                margin: 0;
+                background-color: black;
+                color: #fff;
+                width: 20%;
+            }
+            .red {
+                float: left;
+                margin: 0;
+                background-color: pink;
+                width:20%;
+            }
+            p {
+                width: 50%;
+            }
+            footer {
+                margin-top: 3em;
+                clear: left;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>a exercise of CSS clear</h1>
+            <div class="wrapper">
+                <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+                <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <p class="left">This paragraph clears left.</p>
+            </div>
+        </main>
+        <footer>
+            <small>Almost all codes above are copied from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear#examples">"clear - CSS: Cascading Style Sheets" by Mozilla</a>.</small>
+        </footer>
+    </body>
+</html>
