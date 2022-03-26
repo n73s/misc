@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>a exercise of CSS Flexible Box Layout | n73s</title>
+  <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+    .basic {
+      display: flex;
+      justify-content: space-between;
+      border: 2px dotted rgb(96, 139, 168);
+    }
+    .basic > * {
+      border: 2px solid rgb(96, 139, 168);
+      border-radius: 5px;
+      background-color: rgba(96, 139, 168, .2);
+      padding: 10px;
+    }
+
+    .nowrap-and-overflow {
+      display: flex;
+      width: 10px;
+      border: 2px dotted rgb(96, 139, 168);
+    }
+    .nowrap-and-overflow > * {
+      border: 2px solid rgb(96, 139, 168);
+      border-radius: 5px;
+      background-color: rgba(96, 139, 168, .2);
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>A exercise of CSS Flexible Box Layout</h1>
+    <h2>Basic</h2>
+    <div class="basic">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three<br>has<br>extra<br>text</div>
+    </div>
+
+    <h2>nowrap and overflow</h2>
+    <div class="nowrap-and-overflow">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three<br>has<br>extra<br>text</div>
+    </div>
+
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">
+          "CSS Flexible Box Layout" by Mozilla
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
