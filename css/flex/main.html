@@ -33,6 +33,35 @@
       background-color: rgba(96, 139, 168, .2);
       padding: 10px;
     }
+
+    .display-contents {
+      display: flex;
+      border: 2px dotted rgb(96, 139, 168);
+    }
+    .display-contents > * {
+      border: 2px solid rgb(96, 139, 168);
+      border-radius: 5px;
+      background-color: rgba(96, 139, 168, .2);
+      padding: 10px;
+    }
+    .nested {
+      background-color: orange;
+      display: contents;
+    }
+
+    .separate {
+      display: flex;
+      border: 2px dotted rgb(96, 139, 168);
+    }
+    .separate > * {
+      border: 2px solid rgb(96, 139, 168);
+      border-radius: 5px;
+      background-color: rgba(96, 139, 168, .2);
+      padding: 10px;
+    }
+    .push {
+      margin-left: auto;
+    }
   </style>
 </head>
 
@@ -51,6 +80,26 @@
       <div>One</div>
       <div>Two</div>
       <div>Three<br>has<br>extra<br>text</div>
+    </div>
+
+    <h2>display:contents</h2>
+    <div class="display-contents">
+      <div>One</div>
+      <div>Two</div>
+      <div class="nested">
+        Three
+        <div>Sub-item 1</div>
+        <div>Sub-item 2</div>
+      </div>
+    </div>
+
+    <h2>separate flex items from group of items</h2>
+    <div class="separate">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div class="push">Four</div>
+      <div>Five</div>
     </div>
 
     <h2>References</h2>
