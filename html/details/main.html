@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>a exercise of HTML details | n73s</title>
+  <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+
+    #header-menu-sample>header {
+      width: min(100%, 400px);
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    #header-menu-sample>header>h3 {
+      margin: 0;
+    }
+
+    #header-menu-sample>header>details {
+      position: relative;
+    }
+
+    #header-menu-sample>header>details>summary {
+      display: list-item;
+      cursor: pointer;
+    }
+
+    #header-menu-sample>header>details[open]>summary::before {
+      /* copied from GitHub */
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 80;
+      display: block;
+      cursor: default;
+      content: " ";
+      background: transparent
+    }
+
+    #header-menu-sample>header>details>summary::marker {
+      content: "";
+    }
+
+    #header-menu-sample>header>details>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #header-menu-sample>header>details>ul {
+      position: absolute;
+      right: 0;
+      left: auto;
+      padding: 0;
+      margin: 0;
+      z-index: 999;
+      background-color: orange;
+      list-style: none;
+    }
+
+    #header-menu-sample>header>details>ul>li {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>A exercise of HTML details</h1>
+
+    <h2>Header Menu</h2>
+    <section id="header-menu-sample">
+      <header>
+        app title
+        <details>
+          <summary>Menu1</summary>
+          <ul>
+            <li>
+              <a>very very very long link 1</a>
+            </li>
+            <li>
+              <a>link 2</a>
+            </li>
+            <li>
+              <a>link 3</a>
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Menu2</summary>
+          <ul>
+            <li>
+              <a>very very very long link 4</a>
+            </li>
+            <li>
+              <a>link 5</a>
+            </li>
+            <li>
+              <a>link 6</a>
+            </li>
+          </ul>
+        </details>
+      </header>
+    </section>
+
+    <h2>References</h2>
+    <ul>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">
+          "&ltdetails&gt: The Details disclosure element" by Mozilla
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
