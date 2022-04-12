@@ -22,4 +22,5 @@ featuredWork:
     summary: Some stuff that should give you an idea of what we’re all about.'
 studioFeed:
   title: 'From inside the studio'
+metaDesc: 'A made up agency site that you build if you take Learn Eleventy From Scratch, by Piccalilli'
 ---

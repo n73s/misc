@@ -1,3 +1,5 @@
+const rssPlugin = require('@11ty/eleventy-plugin-rss');
+
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 // Filters
@@ -6,6 +8,11 @@ const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
 
 module.exports = config => {
+    // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+    config.setUseGitIgnore(false);
+
+    config.addPlugin(rssPlugin);
+
     config.addPassthroughCopy('./src/images');
 
     // Returns work items, sorted by display order
