@@ -1,0 +1,2 @@
+- https://go.dev/doc/tutorial/generics
+- https://tip.golang.org/doc/go1.18#generics
